@@ -1,24 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MGM-Rl-9H2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Profil-->
+        <scene sceneID="W7b-lb-abE">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="XUN-tq-BuL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="meQ-G2-zVH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WVE-l7-QJM"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profil" id="StS-7P-JYw"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KrK-El-ufA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1380" y="964"/>
+        </scene>
+        <!--Sepet-->
+        <scene sceneID="8xk-D0-R7a">
+            <objects>
+                <viewController id="KtS-cf-4Jc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yvY-va-b7l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kZd-XZ-QJv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sepet" id="30N-6F-syk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMU-Zx-l9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="964"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="loc-eK-pkH">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jPK-gO-a9W" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Menu" id="7cK-rZ-Vc7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="WWc-IY-jNa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <viewLayoutGuide key="safeArea" id="4A7-Z2-iMl"/>
+                        <color key="barTintColor" red="0.09398312121629715" green="0.097989507019519806" blue="0.10214538127183914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.52113406583978783" green="0.06142203507108162" blue="0.0016637139812278668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WTm-Xj-Wrg" kind="relationship" relationship="rootViewController" id="LPF-L1-Nfs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Os3-rr-MIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-551" y="964"/>
+        </scene>
+        <!--Drink List View Controller-->
+        <scene sceneID="5Iq-eB-2hd">
+            <objects>
+                <viewController id="WTm-Xj-Wrg" customClass="DrinkListViewController" customModule="orderFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BeN-4w-7bH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nQA-ru-KEH">
+                                <rect key="frame" x="0.0" y="111" width="375" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="drinkCell" id="p0i-Hw-lbd" customClass="DrinkDetailsTableCell" customModule="orderFood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p0i-Hw-lbd" id="igS-1M-sh7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uLM-HL-Lr1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="wFA-s1-1e0" customClass="GLCollectionTableViewCell" customModule="orderFood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wFA-s1-1e0" id="8wI-Fi-wJX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090074695649999995" green="0.094141937790000005" blue="0.094146169720000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ppH-HS-Clu" firstAttribute="trailing" secondItem="uLM-HL-Lr1" secondAttribute="trailing" id="CMm-6x-zv2"/>
+                            <constraint firstItem="nQA-ru-KEH" firstAttribute="top" secondItem="uLM-HL-Lr1" secondAttribute="bottom" id="Pc6-jh-C1w"/>
+                            <constraint firstItem="uLM-HL-Lr1" firstAttribute="leading" secondItem="ppH-HS-Clu" secondAttribute="leading" id="TKB-lZ-cF8"/>
+                            <constraint firstItem="nQA-ru-KEH" firstAttribute="leading" secondItem="ppH-HS-Clu" secondAttribute="leading" id="fzm-6B-eqT"/>
+                            <constraint firstItem="uLM-HL-Lr1" firstAttribute="top" secondItem="ppH-HS-Clu" secondAttribute="top" id="h22-5y-n5a"/>
+                            <constraint firstItem="ppH-HS-Clu" firstAttribute="bottom" secondItem="nQA-ru-KEH" secondAttribute="bottom" id="klZ-Tc-emv"/>
+                            <constraint firstItem="ppH-HS-Clu" firstAttribute="trailing" secondItem="nQA-ru-KEH" secondAttribute="trailing" id="lWt-iu-4oU"/>
+                            <constraint firstItem="uLM-HL-Lr1" firstAttribute="height" secondItem="BeN-4w-7bH" secondAttribute="height" multiplier="1:5" id="xWT-Ad-JW1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ppH-HS-Clu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dpe-hy-ETI"/>
+                    <connections>
+                        <outlet property="drinkCollectionsTableView" destination="uLM-HL-Lr1" id="lwn-xx-N6Y"/>
+                        <outlet property="drinkListTableView" destination="nQA-ru-KEH" id="PgV-Ku-Bgm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lU0-sA-U5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-551" y="1717"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qWw-F5-GlA">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MGM-Rl-9H2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="gyU-ME-2xj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.093983121219999993" green="0.097989507020000005" blue="0.1021453813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jPK-gO-a9W" kind="relationship" relationship="viewControllers" id="nYJ-uw-r9t"/>
+                        <segue destination="KtS-cf-4Jc" kind="relationship" relationship="viewControllers" id="XcI-aR-cdN"/>
+                        <segue destination="XUN-tq-BuL" kind="relationship" relationship="viewControllers" id="KGK-a6-z7J"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o15-a0-fko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-551.20000000000005" y="244.22788605697153"/>
         </scene>
     </scenes>
 </document>

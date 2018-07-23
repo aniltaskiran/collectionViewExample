@@ -10,8 +10,18 @@
 		04FB601A2103B58D005014AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB60192103B58D005014AB /* AppDelegate.swift */; };
 		04FB601C2103B58D005014AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB601B2103B58D005014AB /* ViewController.swift */; };
 		04FB601F2103B58D005014AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FB601D2103B58D005014AB /* Main.storyboard */; };
-		04FB60212103B590005014AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FB60202103B590005014AB /* Assets.xcassets */; };
 		04FB60242103B590005014AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FB60222103B590005014AB /* LaunchScreen.storyboard */; };
+		04FB602F2103B5BF005014AB /* GLIndexedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB602B2103B5BF005014AB /* GLIndexedCollectionViewCell.swift */; };
+		04FB60302103B5BF005014AB /* GLCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB602C2103B5BF005014AB /* GLCollectionTableViewCell.swift */; };
+		04FB60312103B5BF005014AB /* GLTableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB602D2103B5BF005014AB /* GLTableCollectionViewController.swift */; };
+		04FB60322103B5BF005014AB /* GLIndexedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FB602E2103B5BF005014AB /* GLIndexedCollectionViewCell.xib */; };
+		04FB60342103CF33005014AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FB60332103CF33005014AB /* Assets.xcassets */; };
+		04FB60362103D6EA005014AB /* DrinkDetailsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FB60352103D6EA005014AB /* DrinkDetailsTableCell.xib */; };
+		04FB60382103D71A005014AB /* DrinkDetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB60372103D71A005014AB /* DrinkDetailsTableCell.swift */; };
+		04FB603A2104A5B5005014AB /* DrinkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB60392104A5B5005014AB /* DrinkListViewController.swift */; };
+		04FB603C21050242005014AB /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB603B21050242005014AB /* DummyData.swift */; };
+		04FB603E210505D5005014AB /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB603D210505D5005014AB /* Drink.swift */; };
+		04FB6040210506FB005014AB /* DrinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB603F210506FB005014AB /* DrinkList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +29,19 @@
 		04FB60192103B58D005014AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FB601B2103B58D005014AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04FB601E2103B58D005014AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04FB60202103B590005014AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04FB60232103B590005014AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04FB60252103B590005014AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04FB602B2103B5BF005014AB /* GLIndexedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLIndexedCollectionViewCell.swift; sourceTree = "<group>"; };
+		04FB602C2103B5BF005014AB /* GLCollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		04FB602D2103B5BF005014AB /* GLTableCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTableCollectionViewController.swift; sourceTree = "<group>"; };
+		04FB602E2103B5BF005014AB /* GLIndexedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLIndexedCollectionViewCell.xib; sourceTree = "<group>"; };
+		04FB60332103CF33005014AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04FB60352103D6EA005014AB /* DrinkDetailsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkDetailsTableCell.xib; sourceTree = "<group>"; };
+		04FB60372103D71A005014AB /* DrinkDetailsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailsTableCell.swift; sourceTree = "<group>"; };
+		04FB60392104A5B5005014AB /* DrinkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListViewController.swift; sourceTree = "<group>"; };
+		04FB603B21050242005014AB /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		04FB603D210505D5005014AB /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		04FB603F210506FB005014AB /* DrinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +74,22 @@
 		04FB60182103B58D005014AB /* orderFood */ = {
 			isa = PBXGroup;
 			children = (
+				04FB60332103CF33005014AB /* Assets.xcassets */,
 				04FB60192103B58D005014AB /* AppDelegate.swift */,
 				04FB601B2103B58D005014AB /* ViewController.swift */,
+				04FB602C2103B5BF005014AB /* GLCollectionTableViewCell.swift */,
+				04FB602B2103B5BF005014AB /* GLIndexedCollectionViewCell.swift */,
+				04FB602E2103B5BF005014AB /* GLIndexedCollectionViewCell.xib */,
+				04FB602D2103B5BF005014AB /* GLTableCollectionViewController.swift */,
 				04FB601D2103B58D005014AB /* Main.storyboard */,
-				04FB60202103B590005014AB /* Assets.xcassets */,
 				04FB60222103B590005014AB /* LaunchScreen.storyboard */,
 				04FB60252103B590005014AB /* Info.plist */,
+				04FB60352103D6EA005014AB /* DrinkDetailsTableCell.xib */,
+				04FB60372103D71A005014AB /* DrinkDetailsTableCell.swift */,
+				04FB60392104A5B5005014AB /* DrinkListViewController.swift */,
+				04FB603B21050242005014AB /* DummyData.swift */,
+				04FB603D210505D5005014AB /* Drink.swift */,
+				04FB603F210506FB005014AB /* DrinkList.swift */,
 			);
 			path = orderFood;
 			sourceTree = "<group>";
@@ -74,6 +104,7 @@
 				04FB60122103B58D005014AB /* Sources */,
 				04FB60132103B58D005014AB /* Frameworks */,
 				04FB60142103B58D005014AB /* Resources */,
+				046DF7822105F0F800488552 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -123,20 +154,50 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FB60242103B590005014AB /* LaunchScreen.storyboard in Resources */,
-				04FB60212103B590005014AB /* Assets.xcassets in Resources */,
 				04FB601F2103B58D005014AB /* Main.storyboard in Resources */,
+				04FB60342103CF33005014AB /* Assets.xcassets in Resources */,
+				04FB60322103B5BF005014AB /* GLIndexedCollectionViewCell.xib in Resources */,
+				04FB60362103D6EA005014AB /* DrinkDetailsTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		046DF7822105F0F800488552 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\necho \"swiftlint is working\"\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04FB60122103B58D005014AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FB603C21050242005014AB /* DummyData.swift in Sources */,
+				04FB603E210505D5005014AB /* Drink.swift in Sources */,
+				04FB60302103B5BF005014AB /* GLCollectionTableViewCell.swift in Sources */,
 				04FB601C2103B58D005014AB /* ViewController.swift in Sources */,
 				04FB601A2103B58D005014AB /* AppDelegate.swift in Sources */,
+				04FB60312103B5BF005014AB /* GLTableCollectionViewController.swift in Sources */,
+				04FB6040210506FB005014AB /* DrinkList.swift in Sources */,
+				04FB603A2104A5B5005014AB /* DrinkListViewController.swift in Sources */,
+				04FB60382103D71A005014AB /* DrinkDetailsTableCell.swift in Sources */,
+				04FB602F2103B5BF005014AB /* GLIndexedCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

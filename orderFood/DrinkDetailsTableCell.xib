@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" rowHeight="68" id="EQA-eh-Ptn" customClass="DrinkDetailsTableCell" customModule="orderFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EQA-eh-Ptn" id="fyO-iA-INb">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34.00₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdO-SB-gMF">
+                        <rect key="frame" x="303" y="23.5" width="56" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Efes Fıçı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHu-qt-ha1">
+                        <rect key="frame" x="16" y="23.5" width="63.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OHu-qt-ha1" firstAttribute="leading" secondItem="fyO-iA-INb" secondAttribute="leadingMargin" id="D4I-0m-9lV"/>
+                    <constraint firstItem="OHu-qt-ha1" firstAttribute="centerY" secondItem="fyO-iA-INb" secondAttribute="centerY" id="QNv-2X-vQF"/>
+                    <constraint firstItem="wdO-SB-gMF" firstAttribute="centerY" secondItem="fyO-iA-INb" secondAttribute="centerY" id="T5t-v7-KfF"/>
+                    <constraint firstItem="wdO-SB-gMF" firstAttribute="trailing" secondItem="fyO-iA-INb" secondAttribute="trailingMargin" id="VD7-P5-jPC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="drinkName" destination="OHu-qt-ha1" id="8hj-HS-GVR"/>
+                <outlet property="drinkPrice" destination="wdO-SB-gMF" id="S4a-dS-mfl"/>
+            </connections>
+            <point key="canvasLocation" x="64" y="26"/>
+        </tableViewCell>
+    </objects>
+</document>
