@@ -22,6 +22,7 @@
 		04FB603C21050242005014AB /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB603B21050242005014AB /* DummyData.swift */; };
 		04FB603E210505D5005014AB /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB603D210505D5005014AB /* Drink.swift */; };
 		04FB6040210506FB005014AB /* DrinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB603F210506FB005014AB /* DrinkList.swift */; };
+		8287A38420E2EEBCE6D51F19 /* Pods_orderFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAD5FFF5B8890E948E10935 /* Pods_orderFood.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,9 @@
 		04FB603B21050242005014AB /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		04FB603D210505D5005014AB /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		04FB603F210506FB005014AB /* DrinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkList.swift; sourceTree = "<group>"; };
+		7CAD5FFF5B8890E948E10935 /* Pods_orderFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_orderFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3FE0C8C4E36D83D1B3A527 /* Pods-orderFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orderFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-orderFood/Pods-orderFood.release.xcconfig"; sourceTree = "<group>"; };
+		F6FC590F2526C8DB438EA26F /* Pods-orderFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orderFood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-orderFood/Pods-orderFood.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8287A38420E2EEBCE6D51F19 /* Pods_orderFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,8 @@
 			children = (
 				04FB60182103B58D005014AB /* orderFood */,
 				04FB60172103B58D005014AB /* Products */,
+				A8986AFEE1715873650B9438 /* Pods */,
+				48975507B459865DC21D5F01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +101,23 @@
 			path = orderFood;
 			sourceTree = "<group>";
 		};
+		48975507B459865DC21D5F01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CAD5FFF5B8890E948E10935 /* Pods_orderFood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8986AFEE1715873650B9438 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6FC590F2526C8DB438EA26F /* Pods-orderFood.debug.xcconfig */,
+				BA3FE0C8C4E36D83D1B3A527 /* Pods-orderFood.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,10 +125,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04FB60282103B590005014AB /* Build configuration list for PBXNativeTarget "orderFood" */;
 			buildPhases = (
+				2B38CF88AAE55DDD6C75F271 /* [CP] Check Pods Manifest.lock */,
 				04FB60122103B58D005014AB /* Sources */,
 				04FB60132103B58D005014AB /* Frameworks */,
 				04FB60142103B58D005014AB /* Resources */,
-				046DF7822105F0F800488552 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -164,22 +188,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		046DF7822105F0F800488552 /* ShellScript */ = {
+		2B38CF88AAE55DDD6C75F271 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			outputFileListPaths = (
-			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-orderFood-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\necho \"swiftlint is working\"\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -339,6 +364,7 @@
 		};
 		04FB60292103B590005014AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6FC590F2526C8DB438EA26F /* Pods-orderFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -357,6 +383,7 @@
 		};
 		04FB602A2103B590005014AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA3FE0C8C4E36D83D1B3A527 /* Pods-orderFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

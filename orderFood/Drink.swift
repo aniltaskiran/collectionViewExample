@@ -10,11 +10,11 @@ import Foundation
 
 struct Drink {
     var name: String?
-    
+
     var price = ""
     var volume = ""
-    
-    init(dictionary: [String:Any]) {
+
+    init(dictionary: [String: Any]) {
         guard let name = dictionary["name"] as! String? else {
             return
         }
@@ -24,7 +24,7 @@ struct Drink {
         guard let volume = dictionary["volume"] as! String? else {
             return
         }
-    
+
     self.volume = volume
     self.name = "\(name) \(volume)"
     self.price = "\(price)₺"

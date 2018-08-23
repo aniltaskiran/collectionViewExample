@@ -9,11 +9,11 @@
 import UIKit
 
 class DrinkListViewController: UIViewController {
-    
+
     @IBOutlet weak var drinkCollectionsTableView: UITableView!
-    
+
     @IBOutlet weak var drinkListTableView: UITableView!
-    
+
     static let tableCellID: String = "tableViewCellID_section_#"
 
     let numberOfSections: Int = 20
@@ -22,22 +22,22 @@ class DrinkListViewController: UIViewController {
     var heightForRowAt: CGFloat {
         return self.view.frame.height / 6
     }
-    
+
     /// Set true to enable UICollectionViews scroll pagination
     var paginationEnabled: Bool = true
-    
+
     var drinkList: DrinkList?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let logo = UIImage(named: "beerHall")
-        let imageView = UIImageView(image:logo)
+        let imageView = UIImageView(image: logo)
         imageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imageView
-        
+
         drinkListTableView.register(UINib(nibName: "DrinkDetailsTableCell", bundle: nil), forCellReuseIdentifier: "drinkCell")
-        
+
         drinkCollectionsTableView.dataSource = self
         drinkCollectionsTableView.delegate = self
         drinkCollectionsTableView.backgroundColor = .clear
@@ -46,10 +46,10 @@ class DrinkListViewController: UIViewController {
         drinkListTableView.delegate = self
         drinkListTableView.backgroundColor = .clear
         drinkListTableView.setEditing(true, animated: true)
-        
+
         drinkList = DrinkList(dictionary: barrelDrinks)
     }
- 
+
     @IBAction func didPressButton(_ sender: AnyObject) {
     drinkListTableView.reloadData()
     drinkCollectionsTableView.reloadData()
@@ -57,9 +57,9 @@ class DrinkListViewController: UIViewController {
 }
 
 ////////////////////////////////////////////////////////////////
-//MARK:-
-//MARK:TABLEVIEW DATA SOURCE
-//MARK:-
+// MARK: -
+// MARK: TABLEVIEW DATA SOURCE
+// MARK: -
 ////////////////////////////////////////////////////////////////
 
 extension DrinkListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -80,10 +80,10 @@ extension DrinkListViewController: UITableViewDelegate, UITableViewDataSource {
         if tableView == drinkListTableView {
             return 28
         }
-        
+
         return 0
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == drinkCollectionsTableView {
             return 1
@@ -91,7 +91,7 @@ extension DrinkListViewController: UITableViewDelegate, UITableViewDataSource {
         guard let count = drinkList?.drinks.count else { return 1 }
         return count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Instead of having a single cellIdentifier for each type of
         // UITableViewCells, like in a regular implementation, we have multiple
@@ -111,43 +111,40 @@ extension DrinkListViewController: UITableViewDelegate, UITableViewDataSource {
         // cells.
         if tableView == drinkCollectionsTableView {
             var cell: GLCollectionTableViewCell? = tableView.dequeueReusableCell(withIdentifier: GLTableCollectionViewController.tableCellID + indexPath.section.description) as? GLCollectionTableViewCell
-            
+
             if cell == nil {
                 cell = GLCollectionTableViewCell(style: .default, reuseIdentifier: GLTableCollectionViewController.tableCellID + indexPath.section.description)
-                
+
                 // Configure the cell...
                 cell!.selectionStyle = .none
                 cell!.collectionViewPaginatedScroll = paginationEnabled
-                
+
             }
             return cell!
         }
-        
-        
-        var cell: DrinkDetailsTableCell = (tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath) as? DrinkDetailsTableCell)!
-        
-        
+
+        let cell: DrinkDetailsTableCell = (tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath) as? DrinkDetailsTableCell)!
+
         guard let name = drinkList?.drinks[indexPath.row % (drinkList?.drinks.count)!].name else { return cell }
-        
+
         cell.drinkName.text = name
         cell.drinkName.textColor = .white
-        
+
         guard let price = drinkList?.drinks[indexPath.row % (drinkList?.drinks.count)!].price else { return cell }
 
-        
         cell.drinkPrice.text = price
         cell.drinkPrice.textColor = .white
         cell.backgroundColor = .clear
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView == drinkCollectionsTableView {
             return tableView.frame.height
         }
         return 40
     }
-    
+
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let cell: GLCollectionTableViewCell = cell as? GLCollectionTableViewCell else {
             return
@@ -156,45 +153,47 @@ extension DrinkListViewController: UITableViewDelegate, UITableViewDataSource {
             cell.setCollectionView(dataSource: self, delegate: self, indexPath: indexPath)
         }
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let items: [UITabBarItem] = (self.navigationController?.tabBarController?.tabBar.items)!
+//        items[1].badgeValue =  "\(Int(items[1].badgeValue!)! + 1)"
+//        items[1].badgeColor = .red
+    }
 }
 
 extension DrinkListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: GLIndexedCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: GLIndexedCollectionViewCell.identifier, for: indexPath) as? GLIndexedCollectionViewCell else {
             fatalError("UICollectionViewCell must be of GLIndexedCollectionViewCell type")
         }
-        
-        
+
         cell.drinkImageView.image = UIImage(named: "\(categories[indexPath.row])")
         cell.drinkImageView.layer.cornerRadius = cell.frame.size.width / 2
         cell.drinkImageView.clipsToBounds = true
-        
+
 //        if let category = drinkList?.category {
 //            cell.setDrinkNameLabel(name: category as! (String, String))
 //        }
         cell.setDrinkNameLabel(name: categoryToName[categories[indexPath.row]]!)
-        
-        guard let indexedCollectionView: GLIndexedCollectionView = collectionView as? GLIndexedCollectionView else {
+
+        guard let _ : GLIndexedCollectionView = collectionView as? GLIndexedCollectionView else {
             fatalError("UICollectionView must be of GLIndexedCollectionView type")
         }
-        
+
         // Configure the cell...
         //        cell.backgroundColor = colorsDict[indexedCollectionView.indexPath.section]?[indexPath.row]
-        
-        
+
         return cell
     }
 }
 
-
 ////////////////////////////////////////////////////////////////
-//MARK:-
-//MARK: UI COLLECTION VIEW DELEGATE
-//MARK:-
+// MARK: -
+// MARK: UI COLLECTION VIEW DELEGATE
+// MARK: -
 ////////////////////////////////////////////////////////////////
 
 extension DrinkListViewController: UICollectionViewDelegate {
@@ -220,7 +219,7 @@ extension DrinkListViewController: UICollectionViewDelegateFlowLayout {
     var collectionRightInset: CGFloat {
         return 5
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
                 return UIEdgeInsets(top: collectionTopInset, left: collectionLeftInset, bottom: collectionBottomInset, right: collectionRightInset)
     }
@@ -228,10 +227,10 @@ extension DrinkListViewController: UICollectionViewDelegateFlowLayout {
         let tableViewCellHeight: CGFloat = self.heightForRowAt
         let collectionItemWidth: CGFloat = tableViewCellHeight - (collectionLeftInset + collectionRightInset)
         let collectionViewHeight: CGFloat = collectionItemWidth
-        
+
         return CGSize(width: collectionItemWidth, height: collectionViewHeight)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
